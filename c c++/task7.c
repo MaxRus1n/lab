@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int countIntersectionPoints(int x1, int y1, int r1, int x2, int y2, int r2) {
+int countPoints(int x1, int y1, int r1, int x2, int y2, int r2) {
     double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 
     if (x1 == x2 && y1 == y2 && r1 == r2) {
@@ -26,13 +26,13 @@ int countIntersectionPoints(int x1, int y1, int r1, int x2, int y2, int r2) {
 
 int main() {
     int x1, y1, r1, x2, y2, r2;
-    printf("Enter the coordinates and radius of the first circle (x1 y1 r1): ");
+    printf("coordinates and radius first circle (x1 y1 r1): ");
     scanf("%d %d %d", &x1, &y1, &r1);
-    printf("Enter the coordinates and radius of the second circle (x2 y2 r2): ");
+    printf("coordinates and radius second circle (x2 y2 r2): ");
     scanf("%d %d %d", &x2, &y2, &r2);
 
-    int result = countIntersectionPoints(x1, y1, r1, x2, y2, r2);
-    printf("Number of intersection points: %d\n", result);
+    int result = countPoints(x1, y1, r1, x2, y2, r2);
+    printf("Number of points: %d\n", result);
 
     return 0;
 }
