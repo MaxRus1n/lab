@@ -2,7 +2,6 @@
 #include <string.h>
 
 int countAnagrams(char* word, int length) {
-    // Базовий випадок: якщо довжина слова дорівнює 1, то є лише одна анаграма
     if (length == 1) {
         return 1;
     }
@@ -10,15 +9,12 @@ int countAnagrams(char* word, int length) {
     int count = 0;
 
     for (int i = 0; i < length; i++) {
-        // Обмінюємо першу букву з поточною
         char temp = word[0];
         word[0] = word[i];
         word[i] = temp;
-
-        // Рекурсивно викликаємо функцію для решти букв
+        
         count += countAnagrams(word + 1, length - 1);
 
-        // Повертаємо букви у вихідний порядок
         temp = word[0];
         word[0] = word[i];
         word[i] = temp;
