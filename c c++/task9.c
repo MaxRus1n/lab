@@ -22,13 +22,13 @@ int minSteps(int x, int y) {
 
 int main() {
     int x, y;
-    printf("Enter the starting point x: ");
+    printf("point x: ");
     scanf("%d", &x);
-    printf("Enter the target point y: ");
+    printf("point y: ");
     scanf("%d", &y);
 
     int result = minSteps(x, y);
-    printf("Minimum number of steps: %d\n", result);
+    printf("Minimum steps: %d\n", result);
 
     return 0;
 }
